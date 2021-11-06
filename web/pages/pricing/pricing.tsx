@@ -1,108 +1,177 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon } from '@heroicons/react/solid'
+import { CheckIcon } from '@heroicons/react/outline'
 
-const tiers = [
-  {
-    name: 'Hobby',
-    href: '#',
-    priceMonthly: 12,
-    description: 'All the basics for starting a new business',
-    includedFeatures: ['Potenti felis, in cras at at ligula nunc.', 'Orci neque eget pellentesque.'],
-  },
-  {
-    name: 'Freelancer',
-    href: '#',
-    priceMonthly: 24,
-    description: 'All the basics for starting a new business',
-    includedFeatures: [
-      'Potenti felis, in cras at at ligula nunc. ',
-      'Orci neque eget pellentesque.',
-      'Donec mauris sit in eu tincidunt etiam.',
-    ],
-  },
-  {
-    name: 'Startup',
-    href: '#',
-    priceMonthly: 32,
-    description: 'All the basics for starting a new business',
-    includedFeatures: [
-      'Potenti felis, in cras at at ligula nunc. ',
-      'Orci neque eget pellentesque.',
-      'Donec mauris sit in eu tincidunt etiam.',
-      'Faucibus volutpat magna.',
-    ],
-  },
-  {
-    name: 'Enterprise',
-    href: '#',
-    priceMonthly: 48,
-    description: 'All the basics for starting a new business',
-    includedFeatures: [
-      'Potenti felis, in cras at at ligula nunc. ',
-      'Orci neque eget pellentesque.',
-      'Donec mauris sit in eu tincidunt etiam.',
-      'Faucibus volutpat magna.',
-      'Id sed tellus in varius quisque.',
-      'Risus egestas faucibus.',
-      'Risus cursus ullamcorper.',
-    ],
-  },
+const hobbyFeatures = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
+const scaleFeatures = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
+const growthFeatures = [
+  'Quia rem est sed impedit magnam',
+  'Dolorem vero ratione voluptates',
+  'Qui sed ab doloribus voluptatem dolore',
+  'Laborum commodi molestiae id et fugiat',
+  'Nam ut ipsa nesciunt culpa modi dolor',
 ]
 
-export default function Example() {
+export default function Pricing() {
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-        <div className="sm:flex sm:flex-col sm:align-center">
-          <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">Pricing Plans</h1>
-          <p className="mt-5 text-xl text-gray-500 sm:text-center">
-            Start building for free, then add a site plan to go live. Account plans unlock additional features.
+    <div className="bg-gray-900">
+      <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="text-center">
+          <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">Pricing</h2>
+          <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+            The right price for you, whoever you are
           </p>
-          <div className="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8">
-            <button
-              type="button"
-              className="relative w-1/2 bg-white border-gray-200 rounded-md shadow-sm py-2 text-sm font-medium text-gray-900 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:z-10 sm:w-auto sm:px-8"
-            >
-              Monthly billing
-            </button>
-            <button
-              type="button"
-              className="ml-0.5 relative w-1/2 border border-transparent rounded-md py-2 text-sm font-medium text-gray-700 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:z-10 sm:w-auto sm:px-8"
-            >
-              Yearly billing
-            </button>
-          </div>
+          <p className="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus
+            molestiae voluptatum.
+          </p>
         </div>
-        <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
-          {tiers.map((tier) => (
-            <div key={tier.name} className="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
-              <div className="p-6">
-                <h2 className="text-lg leading-6 font-medium text-gray-900">{tier.name}</h2>
-                <p className="mt-4 text-sm text-gray-500">{tier.description}</p>
-                <p className="mt-8">
-                  <span className="text-4xl font-extrabold text-gray-900">${tier.priceMonthly}</span>{' '}
-                  <span className="text-base font-medium text-gray-500">/mo</span>
-                </p>
-                <a
-                  href={tier.href}
-                  className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900"
-                >
-                  Buy {tier.name}
-                </a>
+      </div>
+
+      <div className="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
+        <div className="relative z-0">
+          <div className="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative lg:grid lg:grid-cols-7">
+              <div className="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
+                <div className="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
+                  <div className="flex-1 flex flex-col">
+                    <div className="bg-white px-6 py-10">
+                      <div>
+                        <h3 className="text-center text-2xl font-medium text-gray-900" id="tier-hobby">
+                          Hobby
+                        </h3>
+                        <div className="mt-4 flex items-center justify-center">
+                          <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900">
+                            <span className="mt-2 mr-2 text-4xl font-medium">$</span>
+                            <span className="font-extrabold">79</span>
+                          </span>
+                          <span className="text-xl font-medium text-gray-500">/month</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+                      <ul role="list" className="space-y-4">
+                        {hobbyFeatures.map((feature) => (
+                          <li key={feature} className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                            </div>
+                            <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-8">
+                        <div className="rounded-lg shadow-md">
+                          <a
+                            href="#"
+                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            aria-describedby="tier-hobby"
+                          >
+                            Start your trial
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="pt-6 pb-8 px-6">
-                <h3 className="text-xs font-medium text-gray-900 tracking-wide uppercase">What's included</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {tier.includedFeatures.map((feature) => (
-                    <li key={feature} className="flex space-x-3">
-                      <CheckIcon className="flex-shrink-0 h-5 w-5 text-green-500" aria-hidden="true" />
-                      <span className="text-sm text-gray-500">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4">
+                <div className="relative z-10 rounded-lg shadow-xl">
+                  <div
+                    className="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-x-0 top-0 transform translate-y-px">
+                    <div className="flex justify-center transform -translate-y-1/2">
+                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+                        Most popular
+                      </span>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-t-lg px-6 pt-12 pb-10">
+                    <div>
+                      <h3 className="text-center text-3xl font-semibold text-gray-900 sm:-mx-6" id="tier-growth">
+                        Growth
+                      </h3>
+                      <div className="mt-4 flex items-center justify-center">
+                        <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900 sm:text-6xl">
+                          <span className="mt-2 mr-2 text-4xl font-medium">$</span>
+                          <span className="font-extrabold">149</span>
+                        </span>
+                        <span className="text-2xl font-medium text-gray-500">/month</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
+                    <ul role="list" className="space-y-4">
+                      {growthFeatures.map((feature) => (
+                        <li key={feature} className="flex items-start">
+                          <div className="flex-shrink-0">
+                            <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                          </div>
+                          <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-10">
+                      <div className="rounded-lg shadow-md">
+                        <a
+                          href="#"
+                          className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                          aria-describedby="tier-growth"
+                        >
+                          Start your trial
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-10 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:row-end-3">
+                <div className="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
+                  <div className="flex-1 flex flex-col">
+                    <div className="bg-white px-6 py-10">
+                      <div>
+                        <h3 className="text-center text-2xl font-medium text-gray-900" id="tier-scale">
+                          Scale
+                        </h3>
+                        <div className="mt-4 flex items-center justify-center">
+                          <span className="px-3 flex items-start text-6xl tracking-tight text-gray-900">
+                            <span className="mt-2 mr-2 text-4xl font-medium">$</span>
+                            <span className="font-extrabold">349</span>
+                          </span>
+                          <span className="text-xl font-medium text-gray-500">/month</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
+                      <ul role="list" className="space-y-4">
+                        {scaleFeatures.map((feature) => (
+                          <li key={feature} className="flex items-start">
+                            <div className="flex-shrink-0">
+                              <CheckIcon className="flex-shrink-0 h-6 w-6 text-green-500" aria-hidden="true" />
+                            </div>
+                            <p className="ml-3 text-base font-medium text-gray-500">{feature}</p>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-8">
+                        <div className="rounded-lg shadow-md">
+                          <a
+                            href="#"
+                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            aria-describedby="tier-scale"
+                          >
+                            Start your trial
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>

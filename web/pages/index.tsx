@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import CTA from './cta/cta'
 import Hero from './hero/hero'
+import Team from './team/team'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +15,7 @@ const Home: NextPage = () => {
 
       <Hero></Hero>
       <CTA></CTA>
+      <Team></Team>
 
     </div>
   )
