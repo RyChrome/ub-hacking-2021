@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import CTA from './cta/cta'
 import Hero from './hero/hero'
+import Footer from './footer/footer'
+import Footer2 from './footer/footer2'
+// import Function from root/folder/file
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +18,10 @@ const Home: NextPage = () => {
 
       <Hero></Hero>
       <CTA></CTA>
+      {/* <Footer></Footer> */}
+      <Footer2></Footer2>
+
+
 
     </div>
   )
