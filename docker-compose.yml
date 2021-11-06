@@ -1,0 +1,80 @@
+version: "3.9"
+
+services:
+  gateway:
+    container_name: ubh_gateway
+    build:
+      dockerfile: Dockerfile
+      context: ./gateway
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:password@postgres:5432/db
+      NODE_ENV: development
+    ports:
+      - 8000:8000
+
+  payments:
+    container_name: ubh_payments
+    build:
+      dockerfile: Dockerfile
+      context: ./payments
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:password@postgres:5432/db
+      NODE_ENV: development
+    ports:
+      - 8001:8001
+
+  postgres:
+    container_name: ubh_postgres
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+
+  web:
+    container_name: ubh_web
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      dockerfile: Dockerfile
+      context: ./web/
+    volumes:
+      - /app/node_modules # don't want to override node_modules
+      - ./web:/app # live updates
+
+  pgadmin:
+    container_name: ubh_pgadmin
+    image: dpage/pgadmin4:latest
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@openbeats716.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    ports:
+      - "80:80"
+      - "5050:5050"
+
+  redis:
+    container_name: ubh_redis
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    restart: always
+
+  redis-commander:
+    container_name: ubh_redis_commander
+    hostname: redis-commander
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
