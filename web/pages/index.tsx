@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import CTA from './cta/cta'
 import Hero from './hero/hero'
-import Team from './team/team'
+import Features from './features/features'
+import Footer from './footer/footer'
 
 const Home: NextPage = () => {
   return (
@@ -14,8 +15,9 @@ const Home: NextPage = () => {
       </Head>
 
       <Hero></Hero>
+      <Features></Features>
       <CTA></CTA>
-      <Team></Team>
+      <Footer></Footer>
 
     </div>
   )
