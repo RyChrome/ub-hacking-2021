@@ -1,28 +1,28 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline'
+import { AdjustmentsIcon, GlobeAltIcon, LightningBoltIcon, MailIcon, ScaleIcon } from '@heroicons/react/outline'
 
 const features = [
   {
-    name: 'Competitive rates',
-    description: 'Consequuntur omnis dicta cumque, inventore atque ab dolores aspernatur tempora ab doloremque.',
+    name: 'Collaborate',
+    description: 'Connect and collaborate on music with anyone in the world.',
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
+    name: 'Edit',
     description:
-      'Corporis quisquam nostrum nulla veniam recusandae temporibus aperiam officia incidunt at distinctio ratione.',
-    icon: ScaleIcon,
+      'Mix and master your tracks to create a studio like quality throughout your audio tracks.',
+    icon: AdjustmentsIcon,
   },
   {
-    name: 'Instant synchronization',
+    name: 'Sync',
     description:
-      'Omnis, illo delectus? Libero, possimus nulla nemo tenetur adipisci repellat dolore eligendi velit doloribus mollitia.',
+      'Experience seamless collaboration of musical projects with others, while experienceing no lag.',
     icon: LightningBoltIcon,
   },
   {
-    name: 'Reminder emails',
+    name: 'Share',
     description:
-      'Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.',
+      'Post your songs on the Open Beats social media application to share your sounds with the world.',
     icon: MailIcon,
   },
 ]
