@@ -2,7 +2,8 @@
 import Head from 'next/head'
 import Team from './team'*/
 import Navbar from '../navbar/navbar'
-/*import Footer from '../footer/footer'
+import Footer from '../footer/footer'
+/*
 
 const Home: NextPage = () => {
   return (
@@ -105,6 +106,7 @@ const people = [
             </ul>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     )
   }

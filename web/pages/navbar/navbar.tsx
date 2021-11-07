@@ -5,9 +5,9 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Product', href: '/product', current: false },
+  { name: 'Features', href: '/features', current: false },
+  { name: 'Team', href: '/team', current: false },
 ]
 
 function classNames(...classes) {
@@ -39,12 +39,13 @@ export default function Navbar() {
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="/openbeats-teal.png"
-                    alt="The Open Beats Logo"
-                    onclick='../index'
-                  />
+                  <a href="../">
+                    <img
+                      className="hidden lg:block h-8 w-auto"
+                      src="/openbeats-teal.png"
+                      alt="The Open Beats Logo"
+                    />
+                  </a>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
@@ -53,7 +54,7 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-emerald-800 text-white hover:text-emerald-800' : 'text-green-400 hover:bg-emerald-800 hover:text-white',
+                          item.current ? 'bg-emerald-800 text-white hover:bg-green-400 hover:text-emerald-800' : 'text-green-400 hover:bg-emerald-800 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -98,7 +99,7 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/profile"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
