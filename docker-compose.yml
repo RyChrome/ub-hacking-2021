@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-  gateway:
-    container_name: ubh_gateway
+  api:
+    container_name: ubh_api
     build:
       dockerfile: Dockerfile
-      context: ./gateway
+      context: ./api
     depends_on:
       - postgres
     environment:
@@ -13,19 +13,6 @@ services:
       NODE_ENV: development
     ports:
       - 8000:8000
-
-  payments:
-    container_name: ubh_payments
-    build:
-      dockerfile: Dockerfile
-      context: ./payments
-    depends_on:
-      - postgres
-    environment:
-      DATABASE_URL: postgres://user:password@postgres:5432/db
-      NODE_ENV: development
-    ports:
-      - 8001:8001
 
   postgres:
     container_name: ubh_postgres
@@ -61,20 +48,3 @@ services:
     ports:
       - "80:80"
       - "5050:5050"
-
-  redis:
-    container_name: ubh_redis
-    image: "redis:alpine"
-    ports:
-      - "6379:6379"
-    restart: always
-
-  redis-commander:
-    container_name: ubh_redis_commander
-    hostname: redis-commander
-    image: rediscommander/redis-commander:latest
-    restart: always
-    environment:
-      - REDIS_HOSTS=local:redis:6379
-    ports:
-      - "8081:8081"

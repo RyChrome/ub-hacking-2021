@@ -90,6 +90,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.idea
+
 # Mock API
 /api/node_modules
 
