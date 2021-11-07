@@ -248,15 +248,15 @@ export default function Example() {
                         </div>
 
                         <div>
-                          <label htmlFor="mobile-or-email" className="sr-only">
-                            Mobile number or email
+                          <label htmlFor="email" className="sr-only">
+                            Email
                           </label>
                           <input
                             type="text"
-                            name="mobile-or-email"
-                            id="mobile-or-email"
+                            name="email"
+                            id="email"
                             autoComplete="email"
-                            placeholder="Mobile number or email"
+                            placeholder="Email"
                             required
                             className="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
                           />
