@@ -20,10 +20,10 @@ const people = [
       linkedinUrl: '#',
     },
     {
-      name: 'Kyle Wang',
+      name: 'Kevin Wang',
       role: 'Junior',
       imageUrl:
-        'kyle.png',
+        'kevin.png',
       twitterUrl: '#',
       linkedinUrl: '#',
     }
