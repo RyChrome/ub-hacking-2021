@@ -23,12 +23,12 @@ const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Team', href: '/team' },
 ]
 
 export default function Example() {
   return (
-    <div className="relative bg-green-900 overflow-hidden">
+    <div className="relative bg-emerald-900 overflow-hidden">
       <div className="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
         <svg
           className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
