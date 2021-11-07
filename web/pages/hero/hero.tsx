@@ -85,7 +85,7 @@ export default function Example() {
             </div>
             <div className="hidden md:flex">
               <a
-                href="#"
+                href="/login"
                 className="inline-flex items-center px-4 py-2 border border-white text-sm font-medium rounded-md text-white bg-green-400 hover:bg-green-900"
               >
                 Log in
