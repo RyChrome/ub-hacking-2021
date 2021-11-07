@@ -20,9 +20,9 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Features', href: '/features' },
+  //{ name: 'Marketplace', href: '#' },
   { name: 'Team', href: '/team' },
 ]
 
