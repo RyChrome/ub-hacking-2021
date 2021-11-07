@@ -1,5 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {
+  AcademicCapIcon,
+    AdjustmentsIcon,
     CloudUploadIcon,
     CogIcon,
     LockClosedIcon,
@@ -11,12 +13,12 @@ import {
   import Footer from '../footer/footer'
 
   const features = [
-    { name: 'Push to Deploy', icon: CloudUploadIcon },
-    { name: 'SSL Certificates', icon: LockClosedIcon },
-    { name: 'Simple Queues', icon: RefreshIcon },
-    { name: 'Advanced Security', icon: ShieldCheckIcon },
-    { name: 'Powerful API', icon: CogIcon },
-    { name: 'Database Backups', icon: ServerIcon },
+    { name: 'Push To Cloud', icon: CloudUploadIcon, msg: "Don't worry about data storage, put your songs in the cloud!" },
+    { name: 'Collaborate', icon: LockClosedIcon, msg: 'Collaborate with others using Open Beats from anywhere'},
+    { name: 'Mixing and Mastering', icon: AdjustmentsIcon, msg: 'Unparalleled ability to mix and master your product. Create studio-like quality projects all from the browser.'},
+    { name: 'Student Discounts', icon: AcademicCapIcon, msg: 'Receive a 20% student discount when you sign up with a valid .edu email.' },
+    { name: 'Powerful API', icon: CogIcon, msg: 'Open API endpoints that you can integrate into you application.' },
+    { name: 'Database Backups', icon: ServerIcon, msg: 'Never worry about losing your songs again.' },
   ]
   
   
@@ -31,11 +33,10 @@ import {
         
           <h2 className="text-base font-semibold tracking-wider text-green-400 uppercase ">Deploy faster</h2>
           <p className="mt-2 text-3xl font-extrabold text-green-400 tracking-tight sm:text-4xl">
-            Everything you need to deploy your app
+            Everything you need to create your song
           </p>
           <p className="mt-5 max-w-prose mx-auto text-xl text-white ">
-            Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper
-            malesuada. Eleifend condimentum id viverra nulla.
+            Here are some of the things that Open Beats can do for you
           </p>
           <div className="mt-12">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -50,7 +51,7 @@ import {
                       </div>
                       <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{feature.name}</h3>
                       <p className="mt-5 text-base text-gray-500">
-                        Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
+                        {feature.msg}
                       </p>
                     </div>
                   </div>
