@@ -11,9 +11,9 @@ import {
 import Groups from './groups'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: false },
-  { name: 'Groups', href: '#', icon: UsersIcon, current: true },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
+  { name: 'Feed', href: '/feed', icon: HomeIcon, current: false },
+  { name: 'Groups', href: '/groups', icon: UsersIcon, current: true },
+  { name: 'Projects', href: '/projects', icon: FolderIcon, current: false },
   // { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
   // { name: 'Documents', href: '#', icon: InboxIcon, current: false },
   // { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
@@ -137,11 +137,13 @@ export default function Example() {
           <div className="flex-1 flex flex-col min-h-0 bg-green-900">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
-                <img
-                  className="h-8 w-auto"
-                  src="/openbeats-teal.png"
-                  alt="Open Beats"
-                />
+                <a href='../'>
+                  <img
+                    className="h-8 w-auto"
+                    src="/openbeats-teal.png"
+                    alt="Open Beats"
+                  />
+                </a>
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
                 {navigation.map((item) => (
