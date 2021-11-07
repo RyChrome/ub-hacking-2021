@@ -1,7 +1,13 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { PlusIcon } from '@heroicons/react/solid'
+import axios from 'axios'
+import React, { useRef, useState } from 'react'
+const baseURL = 'http://localhost:8000/users/';
 
 export default function Projects() {
+  const onSubmit = () => {
+    axios.post(`${baseURL}`, { email: email, password: password });
+ }
   return (
     <div className="text-center">
       <svg
@@ -23,6 +29,7 @@ export default function Projects() {
       <p className="mt-1 text-sm text-gray-500">Get started by creating a new project.</p>
       <div className="mt-6">
         <button
+          onClick={onSubmit}
           type="button"
           className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
         >

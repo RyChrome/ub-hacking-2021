@@ -16,7 +16,7 @@ export default function Example() {
   };
 
   const onSubmit = () => {
-     axios.post(`${baseURL}`, { email: email, password: password });
+     axios.get(`${baseURL}`, { email: email, password: password });
   }
 
   return (
