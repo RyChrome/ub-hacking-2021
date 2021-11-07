@@ -1,5 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { CheckIcon } from '@heroicons/react/outline'
+import Navbar from '../navbar/navbar'
 
 const hobbyFeatures = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
 const scaleFeatures = ['Pariatur quod similique', 'Sapiente libero doloribus', 'Vel ipsa esse repudiandae']
@@ -13,23 +14,24 @@ const growthFeatures = [
 
 export default function Pricing() {
   return (
-    <div className="bg-green-900">
+    <div className="bg-emerald-800">
+      <Navbar></Navbar>
       <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
         <div className="text-center">
-          <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">Pricing</h2>
-          <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl leading-6 font-semibold text-white uppercase tracking-wider">Pricing</h2>
+          <p className="mt-2 text-3xl font-extrabold text-green-400 sm:text-4xl lg:text-5xl">
             The right price for you, whoever you are
           </p>
-          <p className="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">
+          <p className="mt-3 max-w-4xl mx-auto text-xl text-white sm:mt-5 sm:text-2xl">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos odit doloribus
             molestiae voluptatum.
           </p>
         </div>
       </div>
 
-      <div className="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
+      <div className="mt-16 bg-green-400 pb-12 lg:mt-20 lg:pb-20">
         <div className="relative z-0">
-          <div className="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3" />
+          <div className="absolute inset-0 h-5/6 bg-emerald-800 lg:h-2/3" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative lg:grid lg:grid-cols-7">
               <div className="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
@@ -64,7 +66,7 @@ export default function Pricing() {
                         <div className="rounded-lg shadow-md">
                           <a
                             href="#"
-                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-green-400 hover:bg-green-400 hover:text-white"
                             aria-describedby="tier-hobby"
                           >
                             Start your trial
@@ -78,12 +80,12 @@ export default function Pricing() {
               <div className="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4">
                 <div className="relative z-10 rounded-lg shadow-xl">
                   <div
-                    className="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600"
+                    className="pointer-events-none absolute inset-0 rounded-lg border-2 border-emerald-800"
                     aria-hidden="true"
                   />
                   <div className="absolute inset-x-0 top-0 transform translate-y-px">
                     <div className="flex justify-center transform -translate-y-1/2">
-                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+                      <span className="inline-flex rounded-full bg-green-400 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
                         Most popular
                       </span>
                     </div>
@@ -117,7 +119,7 @@ export default function Pricing() {
                       <div className="rounded-lg shadow-md">
                         <a
                           href="#"
-                          className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                          className="block w-full text-center rounded-lg border border-transparent bg-green-400 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-white hover:text-green-400"
                           aria-describedby="tier-growth"
                         >
                           Start your trial
@@ -159,7 +161,7 @@ export default function Pricing() {
                         <div className="rounded-lg shadow-md">
                           <a
                             href="#"
-                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50"
+                            className="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base font-medium text-green-400 hover:text-white hover:bg-green-400"
                             aria-describedby="tier-scale"
                           >
                             Start your trial
