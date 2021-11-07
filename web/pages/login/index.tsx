@@ -1,44 +1,26 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import axios from 'axios'
+import React, { useRef, useState } from 'react'
 
-import React from "react"
-import axios from "axios";
-const baseURL = "localhost:8000";
-
-
+const baseURL = 'http://localhost:8000/users/';
 
 export default function Example() {
-  const [post, setPost] = React.useState(null);
-  React.useEffect(() => {
-    axios.get(`${baseURL}/users`).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
-  
+
+  const [email, setEmail] = useState('');
+  const onEmailChange = (event: any) => {
+    setEmail(event.target.value);
+  };
+
+  const [password, setPassword] = useState('');
+  const onPasswordChange = (event: any) => {
+    setPassword(event.target.value);
+  };
+
+  const onSubmit = () => {
+     axios.post(`${baseURL}`, { email: email, password: password });
+  }
+
   return (
       <>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
         <div className="min-h-full flex">
           <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -129,6 +111,8 @@ export default function Example() {
                       </label>
                       <div className="mt-1">
                         <input
+                          value={email}
+                          onChange={onEmailChange}
                           id="email"
                           name="email"
                           type="email"
@@ -145,6 +129,8 @@ export default function Example() {
                       </label>
                       <div className="mt-1">
                         <input
+                          value={password}
+                          onChange={onPasswordChange}
                           id="password"
                           name="password"
                           type="password"
@@ -179,6 +165,7 @@ export default function Example() {
                       <button
                         type="submit"
                         className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-400 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        onClick={onSubmit}
                       >
                         Sign in
                       </button>
@@ -199,4 +186,3 @@ export default function Example() {
       </>
     )
   }
-  
